@@ -1,0 +1,141 @@
+:root {
+  --bg-color: #374151;
+  --input-bg-color: #1f2937;
+  --darkest: #111827;
+  --heading_color: #687280;
+  --light: #eee;
+  --pink: #ec4899;
+  --purple: #8b5cf6;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+}
+li {
+  list-style: none;
+}
+input,
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+body {
+  background-color: var(--bg-color);
+  color: white;
+  padding-top: 3rem;
+  font-family: "fira sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.todolist {
+  padding: 1rem;
+}
+.todolist header {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+.todolist header h1 {
+  font-size: 2.5rem;
+  font-weight: 100;
+  color: var(--heading_color);
+  margin-bottom: 1rem;
+}
+.todolist .todo_form {
+  display: flex;
+}
+.todolist .todo_form input {
+  flex: 1 1 0%; /*????*/
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  background-color: var(--input-bg-color);
+  color: var(--light);
+}
+.todolist .todo_form input::placeholder {
+  color: var(--heading_color);
+}
+.todolist .todo_form .addingbtn {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: var(--pink);
+  font-size: 1.25rem;
+  /* ask about it  */
+  background-image: linear-gradient(to right, var(--pink), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* **** */
+  transition: 0.4s;
+}
+.todolist .todo_form .addingbtn:hover {
+  opacity: 0.8;
+}
+.todolist .todo_form .addingbtn:active {
+  opacity: 0.6;
+}
+.todolist main {
+  flex: 1 1 0%;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+.todolist main h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--heading_color);
+  margin-bottom: 1rem;
+}
+
+.tasks .task {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--darkest);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+.tasks .task .task_content input {
+  color: var(--light);
+  font-size: 1.2rem;
+  width: 100%;
+  display: block;
+  transition: 0.4s;
+}
+.tasks .task .task_content input:not(:read-only) {
+  color: var(--pink);
+}
+.tasks .task_control {
+  display: flex;
+  margin: 0 -0.5rem;
+}
+.tasks .task_control button {
+  cursor: pointer;
+  margin: 0 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+.tasks .task_control button:hover {
+  opacity: 0.8;
+}
+.tasks .task_control button:active {
+  opacity: 0.6;
+}
+.tasks .task_control .edit {
+  color: var(--pink);
+  /* ask about it  */
+  background-image: linear-gradient(to right, var(--pink), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.tasks .task_control .delete {
+  color: crimson;
+}
